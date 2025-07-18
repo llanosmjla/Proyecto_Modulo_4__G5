@@ -12,7 +12,7 @@ function fn() {
 
     var config = {
        env: env,
-       baseUrl: 'https://686df563c9090c495387bde6.mockapi.io/api/v1/',
+       baseUrl: 'https://6878380731d28a460e1d80ae.mockapi.io/api/',
        user: 'juanito'
     }
 
