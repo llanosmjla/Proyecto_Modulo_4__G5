@@ -12,7 +12,7 @@ function fn() {
 
     var config = {
        env: env,
-       baseUrl: 'https://6878380731d28a460e1d80ae.mockapi.io/api/',
+       baseUrl: 'https://fakerestapi.azurewebsites.net/api/v1',
        user: 'juanito'
     }
 
