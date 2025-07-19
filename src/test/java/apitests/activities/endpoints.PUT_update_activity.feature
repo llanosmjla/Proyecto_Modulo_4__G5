@@ -1,4 +1,4 @@
-Feature: Actualizar actividad existente
+Feature: Contiene tests de tipo PUT
 
 Background:
   * url baseUrl
@@ -27,3 +27,24 @@ Scenario: Debería actualizar una actividad existente
       completed: true
     }
     """
+
+Scenario: Intentar PUT con ID inconsistente
+  Given path 'Activities/1'
+  And request
+    """
+    {
+      "id": 2,
+      "title": "Inconsistencia",
+      "dueDate": "2025-12-31T00:00:00",
+      "completed": true
+    }
+    """
+  When method put
+  Then status 400
+  And match response contains
+    """
+    {
+      message: '#string'
+    }
+    """
+  And match response.message contains 'coincide'
