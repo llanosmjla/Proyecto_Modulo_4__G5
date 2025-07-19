@@ -1,5 +1,5 @@
 Feature: Contiene los tests para el metodo GET
-    Scenario: Verifica que se pueda obtener todos los vehiculos
+    Scenario: TC-GET-001, Obtener lista completa de portadas registradas
         Given url 'https://fakerestapi.azurewebsites.net/api/v1/'
         And path 'CoverPhotos'
         When method get
